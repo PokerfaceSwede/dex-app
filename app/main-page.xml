@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+    <ActionBar title="Welcome" class="action-bar">
+        <NavigationButton visibility="collapsed" />
+    </ActionBar>
+
+    <GridLayout>
+        <StackLayout class="p-4">
+            <Label text="Welcome to Pokédex" class="h1 text-center p-4" />
+            <Button text="View Pokédex" tap="{{ onViewPokedex }}" class="-primary" />
+        </StackLayout>
+    </GridLayout>
+</Page>

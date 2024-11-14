@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="POKÉDEX">
+        <NavigationButton visibility="collapsed" />
+    </ActionBar>
+
+    <StackLayout class="bg-gray-100">
+        <Label text="{{ 'Caught: ' + caughtCount + ' | Seen: ' + seenCount }}" 
+               class="text-center font-bold p-4 bg-white" />
+
+        <ListView items="{{ pokemon }}" height="100%" separatorColor="transparent" class="list-group">
+            <ListView.itemTemplate>
+                <GridLayout columns="auto, *" class="p-4 m-2 bg-white rounded-lg">
+                    <Image col="0" src="{{ imageUrl }}" width="60" height="60" 
+                           class="{{ variants[0].caught ? '' : 'opacity-50' }}" />
+                    <StackLayout col="1" class="ml-4">
+                        <Label text="{{ name }}" class="font-bold" />
+                        <Label text="{{ '#' + id }}" class="text-gray-500" />
+                    </StackLayout>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</Page>
